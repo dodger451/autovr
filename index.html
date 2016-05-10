@@ -105,7 +105,7 @@
 
 <script>
 
-    var serverUrl = 'ws://10.42.0.1:9090';// e.g. ws://10.42.0.1:9090
+    var serverUrl = 'ws://192.168.178.40:9090';// e.g. ws://10.42.0.1:9090
 
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
     // Only enable it if you actually need to.
@@ -128,8 +128,8 @@
 
     var body = new THREE.Object3D();
     body.add(camera);
-    body.position.z = 1.5;
-    //body.position.x = -10;
+    body.position.z = 2.0;
+    body.position.x = -2;
     body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
     scene.add(body);
 
@@ -177,9 +177,9 @@
     var cube = new THREE.Mesh(geometry, material);
 
     // Position cube mesh
-    cube.position.x = 0.0;
-    cube.position.y = 0.0;
-    cube.position.z = 0.0;
+    cube.position.x = 0.0;//forward
+    cube.position.y = 0.0;//left
+    cube.position.z = 0.0;//
 
 
     // Add cube mesh to your three.js scene
@@ -232,10 +232,11 @@
         mesh.receiveShadow = true;
         mesh.castShadow = true;
         mesh.rotation.x = Math.PI / 2;
-        mesh.scale.set(10, 10, 10);
+       // mesh.scale.set(1, 1, 1);
+        //mesh.position.x = 1;
 //
         scene.add(mesh);
-        render();
+        animate();
     });
 
 
