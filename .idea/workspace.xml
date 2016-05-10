@@ -2,700 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085e3fd8-2ac3-4f73-829d-f4b08fdfa1a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/no-sleep-120s.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/pixel-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/box.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/frame0000.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/autovr.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3dmodel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CONTRIBUTING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/generate_images.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/ic_arrow_back_white_24dp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/ic_cardboard_white_24dp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/ic_fullscreen_exit_white_24dp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/ic_fullscreen_white_24dp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/ic_settings_white_24dp.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/passat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/passat.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/passat.mtl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/passat.obj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asset_src/rotate-instructions.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/device-info-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/eventemitter2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ros3d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ros3d_works.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/roslib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/webvr-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/NOTICE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/droid_sans_mono_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/droid_sans_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/droid_serif_bold.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/gentilis_bold.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/gentilis_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/helvetiker_bold.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/helvetiker_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/optimer_bold.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/fonts/optimer_regular.typeface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/AnimationClipCreator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/BlendCharacter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/BlendCharacterGui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/BufferGeometryUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Car.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Cloth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/CurveExtras.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Detector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Encodings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/GPUParticleSystem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Gyroscope.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Half.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ImprovedNoise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/MD2Character.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/MD2CharacterComplex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/MarchingCubes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Mirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/MorphAnimMesh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/MorphAnimation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Ocean.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Octree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/PRNG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ParametricGeometries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/RollerCoaster.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ShaderGodRays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ShaderSkin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ShaderTerrain.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/ShaderToon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/SimplexNoise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/SimulationRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/SkyShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/TimelinerController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/TypedArrayUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/UCSCharacter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/Volume.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/VolumeSlice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/WaterShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/WebVR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/animation/CCDIKSolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/animation/MMDPhysics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/cameras/CinematicCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/cameras/CombinedCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/DeviceOrientationControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/DragControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/EditorControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/FirstPersonControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/FlyControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/MouseControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/OrbitControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/OrthographicTrackballControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/PointerLockControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/TrackballControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/TransformControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/controls/VRControls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/crossfade/gui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/crossfade/scenes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/crossfade/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/curves/NURBSCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/curves/NURBSSurface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/curves/NURBSUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/AnaglyphEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/AsciiEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/CardboardEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/ParallaxBarrierEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/PeppersGhostEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/StereoEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/effects/VREffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/exporters/OBJExporter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/exporters/STLBinaryExporter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/exporters/STLExporter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/exporters/TypedGeometryExporter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/geometries/ConvexGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/geometries/DecalGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/geometries/TeapotBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/geometries/hilbert2D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/geometries/hilbert3D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/ammo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/charsetencoder.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/dat.gui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/earcut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/inflate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/jszip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/msgpack-js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/photons.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/pnltri.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/stats.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/system.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/timeliner_gui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/tween.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/zlib_and_gzip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/libs/zlib_and_gzip.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/3MFLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/AMFLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/AWDLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/AssimpJSONLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/BabylonLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/BinaryLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ColladaLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ColladaLoader2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/DDSLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/FBXLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/HDRCubeTextureLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/KMZLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/MD2Loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/MMDLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/MTLLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/NRRDLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/OBJLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/PCDLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/PDBLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/PLYLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/PVRLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/PlayCanvasLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/RGBELoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/STLLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/SVGLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/TGALoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/UTF8Loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/VRMLLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/VTKLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/collada/Animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/collada/AnimationHandler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/collada/KeyFrameAnimation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/CTMLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/CTMWorker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/ctm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/license/OpenCTM.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/license/js-lzma.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/license/js-openctm.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/ctm/lzma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/deprecated/SceneLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/glTF-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/glTFAnimation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/glTFLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/glTFLoaderUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/glTFShaders.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/gltf/gltfUtilities.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/sea3d/SEA3D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/sea3d/SEA3DDeflate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/sea3d/SEA3DLZMA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/sea3d/SEA3DLegacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/loaders/sea3d/SEA3DLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/materials/ShadowMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/math/ColorConverter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/math/Lut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/modifiers/ExplodeModifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/modifiers/SubdivisionModifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/modifiers/TessellateModifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/BuilderNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/ConstNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/FunctionCallNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/FunctionNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/GLNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/InputNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/NodeLib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/NodeMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/RawNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/TempNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/CameraNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/ColorsNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/LightNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/NormalNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/PositionNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/ReflectNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/ScreenUVNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/accessors/UVNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/ColorNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/CubeTextureNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/FloatNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/IntNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/ScreenNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/TextureNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/Vector2Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/Vector3Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/inputs/Vector4Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/materials/PhongNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/materials/PhongNodeMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/materials/StandardNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/materials/StandardNodeMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/math/Math1Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/math/Math2Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/math/Math3Node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/math/OperatorNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/postprocessing/NodePass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/ColorAdjustmentNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/JoinNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/LuminanceNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/NoiseNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/NormalMapNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/ResolutionNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/RoughnessToBlinnExponentNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/SwitchNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/TimerNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/nodes/utils/VelocityNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/objects/ShadowMesh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/pmrem/PMREMCubeUVPacker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/pmrem/PMREMGenerator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/AdaptiveToneMappingPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/BloomPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/BokehPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/ClearPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/DotScreenPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/EffectComposer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/FilmPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/GlitchPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/ManualMSAARenderPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/MaskPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/RenderPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/SMAAPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/SavePass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/ShaderPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/TAARenderPass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/postprocessing/TexturePass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/CSS2DRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/CSS3DRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/CSS3DStereoRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/CanvasRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/Projector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/RaytracingRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/RaytracingWorker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/SVGRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/renderers/SoftwareRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BasicShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BleachBypassShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BlendShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BokehShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BokehShader2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/BrightnessContrastShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/ColorCorrectionShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/ColorifyShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/CompositeShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/ConvolutionShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/CopyShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/DOFMipMapShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/DigitalGlitch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/DotScreenShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/EdgeShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/EdgeShader2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/FXAAShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/FilmShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/FocusShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/FresnelShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/GammaCorrectionShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/HorizontalBlurShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/HorizontalTiltShiftShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/HueSaturationShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/KaleidoShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/LuminosityShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/MirrorShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/NormalMapShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/OceanShaders.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/ParallaxShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/RGBShiftShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/SMAAShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/SSAOShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/SepiaShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/TechnicolorShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/ToneMapShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/TriangleBlurShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/UnpackDepthRGBAShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/VerticalBlurShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/VerticalTiltShiftShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/shaders/VignetteShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/utils/GeometryUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/utils/ImageUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/utils/ShadowMapViewer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/examples/js/utils/UVsDebug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/Three.Legacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/Three.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/AnimationClip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/AnimationMixer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/AnimationObjectGroup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/AnimationUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/KeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/PropertyBinding.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/PropertyMixer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/BooleanKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/ColorKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/NumberKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/QuaternionKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/StringKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/animation/tracks/VectorKeyframeTrack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/audio/Audio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/audio/AudioAnalyser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/audio/AudioBuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/audio/AudioListener.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/audio/PositionalAudio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/cameras/Camera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/cameras/CubeCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/cameras/OrthographicCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/cameras/PerspectiveCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/cameras/StereoCamera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/BufferAttribute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/BufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Clock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/DirectGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/EventDispatcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Face3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Geometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/InstancedBufferAttribute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/InstancedBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/InstancedInterleavedBuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/InterleavedBuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/InterleavedBufferAttribute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Layers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Object3D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Raycaster.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/core/Uniform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/CurveUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/SceneUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/ShapeUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/core/Curve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/core/CurvePath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/core/Font.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/core/Path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/core/Shape.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/ArcCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/CatmullRomCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/ClosedSplineCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/CubicBezierCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/CubicBezierCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/EllipseCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/LineCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/LineCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/QuadraticBezierCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/QuadraticBezierCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/SplineCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/curves/SplineCurve3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/BoxBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/BoxGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/CircleBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/CircleGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/CylinderBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/CylinderGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/DodecahedronGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/EdgesGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/ExtrudeGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/IcosahedronGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/LatheBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/LatheGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/OctahedronGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/ParametricGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/PlaneBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/PlaneGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/PolyhedronGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/RingBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/RingGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/ShapeGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/SphereBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/SphereGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TetrahedronGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TextGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TorusBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TorusGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TorusKnotBufferGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TorusKnotGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/TubeGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/geometries/WireframeGeometry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/ArrowHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/AxisHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/BoundingBoxHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/BoxHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/CameraHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/DirectionalLightHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/EdgesHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/FaceNormalsHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/GridHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/HemisphereLightHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/PointLightHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/SkeletonHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/SpotLightHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/VertexNormalsHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/helpers/WireframeHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/objects/ImmediateRenderObject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/extras/objects/MorphBlendMesh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/AmbientLight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/DirectionalLight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/HemisphereLight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/Light.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/LightShadow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/PointLight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/lights/SpotLight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/AnimationLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/BinaryTextureLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/BufferGeometryLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/Cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/CompressedTextureLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/CubeTextureLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/FontLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/ImageLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/JSONLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/Loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/LoadingManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/MaterialLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/ObjectLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/TextureLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/loaders/XHRLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/LineBasicMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/LineDashedMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/Material.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshBasicMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshDepthMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshLambertMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshNormalMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshPhongMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MeshStandardMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/MultiMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/PointsMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/RawShaderMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/ShaderMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/materials/SpriteMaterial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Box2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Box3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Euler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Frustum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Interpolant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Line3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Math.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Matrix3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Matrix4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Plane.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Quaternion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Ray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Sphere.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Spherical.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Spline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Triangle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Vector2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Vector3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/Vector4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/interpolants/CubicInterpolant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/interpolants/DiscreteInterpolant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/interpolants/LinearInterpolant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/math/interpolants/QuaternionLinearInterpolant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Bone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/LOD.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/LensFlare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/LineSegments.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Mesh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Points.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Skeleton.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/SkinnedMesh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/objects/Sprite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/WebGLRenderTarget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/WebGLRenderTargetCube.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/WebGLRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/alphamap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/alphamap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/alphatest_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/ambient_pars.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/aomap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/aomap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/begin_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/beginnormal_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/bsdfs.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/bumpmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/color_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/color_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/color_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/color_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/common.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/cube_uv_reflection_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/defaultnormal_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/displacementmap_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/displacementmap_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/emissivemap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/emissivemap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/encodings_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/encodings_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/fog_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/fog_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lightmap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lightmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_lambert_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_pars.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_standard_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_standard_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/lights_template.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/map_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/map_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/map_particle_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/map_particle_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/metalnessmap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/metalnessmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/morphnormal_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/morphtarget_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/morphtarget_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/normal_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/normalmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/premultiplied_alpha_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/project_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/roughnessmap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/roughnessmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmask_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/skinbase_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/skinning_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/skinning_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/skinnormal_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/specularmap_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/specularmap_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/tonemapping_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/tonemapping_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv_pars_fragment.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv_pars_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/uv_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderChunk/worldpos_vertex.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/cube_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/cube_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/depthRGBA_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/depthRGBA_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/depth_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/depth_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/distanceRGBA_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/distanceRGBA_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/equirect_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/equirect_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/linedashed_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/linedashed_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshbasic_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshbasic_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshlambert_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshlambert_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshphong_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshphong_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshstandard_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/meshstandard_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/normal_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/normal_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/points_frag.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/ShaderLib/points_vert.glsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/UniformsLib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/shaders/UniformsUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLBufferRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLCapabilities.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLExtensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLGeometries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLIndexedBufferRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLLights.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLObjects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLProgram.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLPrograms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLProperties.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLShadowMap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/WebGLState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/plugins/LensFlarePlugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/renderers/webgl/plugins/SpritePlugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/scenes/Fog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/scenes/FogExp2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/scenes/Scene.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/CanvasTexture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/CompressedTexture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/CubeTexture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/DataTexture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/Texture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/src/textures/VideoTexture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/three.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/three/three.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/build/webvr-polyfill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/dist/es6-promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/dist/es6-promise.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise.umd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/-internal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/asap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/enumerator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/polyfill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/promise/all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/promise/race.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/promise/reject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/promise/resolve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/then.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/lib/es6-promise/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/node_modules/es6-promise/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/cardboard-distorter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/cardboard-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/cardboard-vr-display.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/deps/headtrackr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/deps/wglu-preserve-state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/device-info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/display-wrappers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/distortion/distortion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/dpdb/dpdb-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/dpdb/dpdb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/emitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/mouse-keyboard-vr-display.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/rotate-instructions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/sensor-fusion/complementary-filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/sensor-fusion/fusion-pose-sensor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/sensor-fusion/pose-predictor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/sensor-fusion/sensor-sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/three-math.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/touch-panner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/viewer-selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/wakelock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/webcam-position-sensor-vr-device.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/webvr-polyfill/src/webvr-polyfill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/button-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/emitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/modes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/webvr-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/device-info-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/settings-dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/settings-dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/size_test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tracking_test.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/asset_src/passat.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="autovr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -714,8 +23,29 @@
   <component name="FavoritesManager">
     <favorites_list name="autovr" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1344">
+              <caret line="107" column="2" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true">
@@ -774,6 +104,34 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autovr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autovr" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autovr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autovr" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset_src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -782,6 +140,35 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.jscs" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -793,19 +180,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462912934006</updated>
-      <workItem from="1462912935220" duration="93000" />
+      <workItem from="1462912935220" duration="637000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1462913044281</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462913044281</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93000" />
+    <option name="totallyTimeSpent" value="637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -827,8 +223,37 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/img/frame0000.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.jscsrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1344">
+          <caret line="107" column="2" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
