@@ -109,7 +109,7 @@
 
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
     // Only enable it if you actually need to.
-    var renderer = new THREE.WebGLRenderer({antialias: false, alpha: true});
+    var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0x555555, 1.0);
 
@@ -128,10 +128,18 @@
 
     var body = new THREE.Object3D();
     body.add(camera);
-    body.position.z = 2.0;
-    body.position.x = -2;
-    body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
+
+    //birdeye
+    body.position.z = 30.0;
+    body.position.y = -13.0;
+    body.position.x = -3;
+    body.rotation.set(-Math.PI * -0.15, -Math.PI * 0, -Math.PI * 0.0, 'XYZ');
+    //follow-perspective:
+/*body.position.z = 3.0;
+ body.position.x = -3;
+ body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');*/
     scene.add(body);
+
 
 
     // Apply VR headset positional data to camera.
@@ -210,8 +218,8 @@
         ros: ros,
 //  topic : "/sensors/voxel_grid/output_throttle",
 //  topic : "/sensors/voxel_grid/output",
-//  topic : "/sensors/velodyne_points_throttle",
-        topic: "/sensors/points",
+  topic : "/sensors/velodyne_points",
+        //topic: "/sensors/points",
 //  topic : "/sensors/points_throttle",
         tfClient: tfClient,
         max_pts: 100000,
@@ -219,8 +227,19 @@
         rootObject: scene,
 //  texture : 'asset_src/pixel-white.png'
     });
-
-
+    light = new THREE.DirectionalLight(0xffffff);
+    light.castShadow = true;
+    light.shadowCameraLeft = -60;
+    light.shadowCameraTop = -60;
+    light.shadowCameraRight = 60;
+    light.shadowCameraBottom = 60;
+    light.shadowCameraNear = 1;
+    light.shadowCameraFar = 1000;
+    light.shadowBias = -.0001
+    light.shadowMapWidth = light.shadowMapHeight = 1024;
+    light.shadowDarkness = .7;
+    light.position.z = 10;
+    scene.add(light);
     loader = new THREE.JSONLoader();
     var mesh;
     loader.load('asset_src/passat.js', function (geometry, materials) {
