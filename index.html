@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>Web VR boilerplate</title>
+    <title>AutoVR</title>
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
@@ -105,40 +105,29 @@
 
 <script>
 
-    var serverUrl = 'ws://192.168.178.40:9090';// e.g. ws://10.42.0.1:9090
+</script>
 
+<script>
+
+//    var serverUrl = 'ws://192.168.178.40:9090';// e.g. ws://10.42.0.1:9090
+   var serverUrl = 'ws://192.168.99.100:9090';// e.g. ws://10.42.0.1:9090
+ //   var serverUrl = 'ws://758f5159.ngrok.io';// e.g. ws://10.42.0.1:9090
+    var cView = 'follow';
+    var farClip = 35;
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
     // Only enable it if you actually need to.
     var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0x555555, 1.0);
-
-    // Append the canvas element created by the renderer to document body element.
     document.body.appendChild(renderer.domElement);
 
-    // Create a three.js scene.
     var scene = new THREE.Scene();
 
-    // Create a three.js camera.
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-
-    camera.position.x = 0;
-    camera.position.y = 0;
-    camera.position.z = 0;
-
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, farClip);
     var body = new THREE.Object3D();
     body.add(camera);
-
-    //birdeye
-    body.position.z = 30.0;
-    body.position.y = -13.0;
-    body.position.x = -3;
-    body.rotation.set(-Math.PI * -0.15, -Math.PI * 0, -Math.PI * 0.0, 'XYZ');
-    //follow-perspective:
-/*body.position.z = 3.0;
- body.position.x = -3;
- body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');*/
     scene.add(body);
+    setView(cView);
 
 
 
@@ -179,31 +168,26 @@
     };
     var manager = new WebVRManager(renderer, effect, params);
 
-    // Create 3D objects.
+    // Create interactive 3D objects to change position.
     var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
     var material = new THREE.MeshNormalMaterial();
     var cube = new THREE.Mesh(geometry, material);
-
-    // Position cube mesh
-    cube.position.x = 0.0;//forward
+    cube.position.x = -2.7;//forward
     cube.position.y = 0.0;//left
-    cube.position.z = 0.0;//
-
-
-    // Add cube mesh to your three.js scene
+    cube.position.z = 3.5;//up
+    var cubeScale = 0.1;
+    cube.scale.set(cubeScale, cubeScale, cubeScale);
     scene.add(cube);
-
-
-    var ros = new ROSLIB.Ros({
-        url: serverUrl
-//  url : 'ws://localhost:9090'
-//  url : 'ws://192.168.0.163:9090'
-//  url : 'ws://192.168.178.40:9090'
-    });
+    //TODO setup toggle view when gazing on the cube
 
     // Add a grid.
-    scene.add(new ROS3D.Grid());
+    var grid = new ROS3D.Grid(grid);
+    scene.add(grid);
 
+    // start ROS
+    var ros = new ROSLIB.Ros({
+        url: serverUrl
+    });
     // Setup a client to listen to TFs.
     var tfClient = new ROSLIB.TFClient({
         ros: ros,
@@ -216,11 +200,11 @@
     // Setup PointCloud2
     pointCloud = new ROS3D.PointCloud2({
         ros: ros,
+//  topic : "/sensors/points_throttle",
 //  topic : "/sensors/voxel_grid/output_throttle",
 //  topic : "/sensors/voxel_grid/output",
-  topic : "/sensors/velodyne_points",
-        //topic: "/sensors/points",
-//  topic : "/sensors/points_throttle",
+        //topic : "/sensors/velodyne_points",
+        topic: "/sensors/points", // Ibeo Lux
         tfClient: tfClient,
         max_pts: 100000,
         size: 0.5,
@@ -229,15 +213,14 @@
     });
     light = new THREE.DirectionalLight(0xffffff);
     light.castShadow = true;
-    light.shadowCameraLeft = -60;
-    light.shadowCameraTop = -60;
-    light.shadowCameraRight = 60;
-    light.shadowCameraBottom = 60;
-    light.shadowCameraNear = 1;
-    light.shadowCameraFar = 1000;
-    light.shadowBias = -.0001
-    light.shadowMapWidth = light.shadowMapHeight = 1024;
-    light.shadowDarkness = .7;
+    light.shadow.camera.left = -60;
+    light.shadow.camera.top = -60;
+    light.shadow.camera.right = 60;
+    light.shadow.camera.bottom = 60;
+    light.shadow.camera.near = 1;
+    light.shadow.camera.far = 1000;
+    light.shadow.bias = -.0001;
+    light.shadow.mapSize.width = light.shadow.mapSize.height = 1024;
     light.position.z = 10;
     scene.add(light);
     loader = new THREE.JSONLoader();
@@ -251,7 +234,7 @@
         mesh.receiveShadow = true;
         mesh.castShadow = true;
         mesh.rotation.x = Math.PI / 2;
-       // mesh.scale.set(1, 1, 1);
+        mesh.scale.set(1, 1, 1);
         //mesh.position.x = 1;
 //
         scene.add(mesh);
@@ -278,12 +261,42 @@
     // Kick off animation loop
     animate(performance ? performance.now() : Date.now());
 
+    function setView(view) {
+        switch (view) {
+            case 'birdeye':
+                body.position.z = 30.0;
+                body.position.y = 0.0;
+                body.position.x = -3;
+                body.rotation.set(-Math.PI * -0.15, 0, 0, 'XYZ');
+                break;
+            case 'follow':
+            default:
+                body.position.z = 3.0;
+                body.position.y = 0.0;
+                body.position.x = -3;
+                body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
+                break;
+        }
+        cView = view;
+    }
+
     function onResize(e) {
         effect.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
     }
 
+    function onWindowKeyDown(event) {
+        // Get the key code of the pressed key
+        var keyCode = event.which;
+
+        // 'space' - Toggle through the views
+        if (keyCode == 32) {
+            setView(cView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
+        }
+    }
+
+    window.addEventListener("keydown", onWindowKeyDown, false);
     window.addEventListener('resize', onResize, true);
     window.addEventListener('vrdisplaypresentchange', onResize, true);
 
