@@ -111,7 +111,7 @@
 
 //    var serverUrl = 'ws://192.168.178.40:9090';// e.g. ws://10.42.0.1:9090
    var serverUrl = 'ws://192.168.99.100:9090';// e.g. ws://10.42.0.1:9090
- //   var serverUrl = 'ws://758f5159.ngrok.io';// e.g. ws://10.42.0.1:9090
+   // var serverUrl = 'ws://12f54391.ngrok.io';// e.g. ws://10.42.0.1:9090
     var cView = 'follow';
     var farClip = 35;
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
@@ -138,6 +138,8 @@
     var effect = new THREE.VREffect(renderer);
     effect.setSize(window.innerWidth, window.innerHeight);
 
+
+    var raycaster = new THREE.Raycaster();
 
     // Add a repeating grid as a skybox.
     //var boxWidth = 5;
@@ -224,22 +226,50 @@
     light.position.z = 10;
     scene.add(light);
     loader = new THREE.JSONLoader();
-    var mesh;
+    var carMesh;
     loader.load('asset_src/passat.js', function (geometry, materials) {
-        mesh = new THREE.Mesh(
+        carMesh = new THREE.Mesh(
                 geometry,
                 new THREE.MultiMaterial(materials)
         );
 
-        mesh.receiveShadow = true;
-        mesh.castShadow = true;
-        mesh.rotation.x = Math.PI / 2;
-        mesh.scale.set(1, 1, 1);
+        carMesh.receiveShadow = true;
+        carMesh.castShadow = true;
+        carMesh.rotation.x = Math.PI / 2;
+        carMesh.scale.set(1, 1, 1);
         //mesh.position.x = 1;
 //
-        scene.add(mesh);
+        scene.add(carMesh);
         animate();
     });
+
+    var chmaterial = new THREE.LineBasicMaterial({ color: 0xAAFFAA });
+    // crosshair size
+    var chx = 0.01, chy = 0.01;
+
+    var chgeometry = new THREE.Geometry();
+
+    // crosshair
+    chgeometry.vertices.push(new THREE.Vector3(0, chy, 0));
+chgeometry.vertices.push(new THREE.Vector3(0, -chy, 0));
+chgeometry.vertices.push(new THREE.Vector3(0, 0, 0));
+chgeometry.vertices.push(new THREE.Vector3(chx, 0, 0));
+chgeometry.vertices.push(new THREE.Vector3(-chx, 0, 0));
+
+    var crosshair = new THREE.Line( chgeometry, chmaterial );
+
+    // place it in the center
+    var crosshairPercentX = 50;
+    var crosshairPercentY = 50;
+    var crosshairPositionX = (crosshairPercentX / 100) * 2 - 1;
+    var crosshairPositionY = (crosshairPercentY / 100) * 2 - 1;
+
+    crosshair.position.x = crosshairPositionX * camera.aspect;
+    crosshair.position.y = crosshairPositionY;
+
+    crosshair.position.z = -0.3;
+
+    camera.add( crosshair );
 
 
     // Request animation frame loop function
@@ -251,16 +281,20 @@
 
         // Update VR headset position and apply to camera.
         controls.update();
-
+        findIntersect();
         // Render the scene through the manager.
         manager.render(scene, camera, timestamp);
 
         requestAnimationFrame(animate);
     }
 
-    // Kick off animation loop
-    animate(performance ? performance.now() : Date.now());
 
+    var mouse = new THREE.Vector2();
+    function onMouseMove( event ) {
+        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+    }
     function setView(view) {
         switch (view) {
             case 'birdeye':
@@ -268,6 +302,10 @@
                 body.position.y = 0.0;
                 body.position.x = -3;
                 body.rotation.set(-Math.PI * -0.15, 0, 0, 'XYZ');
+
+                    console.log(body.rotation);
+                    console.log(camera.rotation);
+
                 break;
             case 'follow':
             default:
@@ -275,6 +313,7 @@
                 body.position.y = 0.0;
                 body.position.x = -3;
                 body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
+
                 break;
         }
         cView = view;
@@ -296,6 +335,40 @@
         }
     }
 
+
+    function onCubeSelected() {
+        setView(cView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
+    }
+    function onCubeIntersect(intersect) {
+        var now = Date.now();
+        window.firstCubeIntersect = window.firstCubeIntersect || now;
+        window.lastCubeIntersect =  now;
+        var timeSince = now - window.firstCubeIntersect;
+        cube.material.color = (new THREE.Color()).setRGB(Math.min(timeSince, 2000)/2000, 0, 0);
+        if (timeSince > 2000) {
+            onCubeSelected();
+            console.log('selected cube');
+            window.firstCubeIntersect = null;
+        }
+    }
+    function findIntersect() {
+        //raycaster.setFromCamera( mouse, camera );
+        raycaster.setFromCamera( new THREE.Vector2(0, 0), camera );
+        //var intersects = raycaster.intersectObjects( scene.children );
+        var intersects = raycaster.intersectObject( cube, false );
+        for ( var i = 0; i < intersects.length; i++ ) {
+            if (intersects[ i ].object == cube) {
+                onCubeIntersect(intersects[ i ]);
+                console.log('found cube');
+            }
+        }
+    }
+
+
+    // Kick off animation loop
+    animate(performance ? performance.now() : Date.now());
+
+    window.addEventListener( 'mousemove', onMouseMove, false );
     window.addEventListener("keydown", onWindowKeyDown, false);
     window.addEventListener('resize', onResize, true);
     window.addEventListener('vrdisplaypresentchange', onResize, true);
