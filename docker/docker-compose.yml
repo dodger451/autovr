@@ -10,8 +10,7 @@ services:
 
   player:
     image: autovr
-#    command: rosbag play -q --clock /rosbags/2016-05-10-23-52-57.bag
-    command: rosbag play -q -l --clock /rosbags/2016-05-10-23-52-57.bag
+    command: rosbag play -q -l --clock /rosbags/2016-05-11-00-00-01.bag
     volumes:
       - ${ROSBAGDIR}:/rosbags
     environment:
@@ -19,7 +18,6 @@ services:
       - "ROS_MASTER_URI=http://roscore:11311"
     depends_on:
       - roscore
-#    restart: always
 
   websocket:
     image: autovr
