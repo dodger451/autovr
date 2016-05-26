@@ -1,13 +1,14 @@
 FROM ros:indigo
 
-# place here your application's setup specifics
-# ADD logfile.bag logfile.bag 
-
 RUN apt-get update && apt-get install -y \
     python-twisted \
     ros-indigo-rosbridge-server \
     ros-indigo-tf2-web-republisher \
-    && rm -rf /var/lib/apt/lists/ 
+    && rm -rf /var/lib/apt/lists/
+
+# add launchfile for starting rosbag and tf2_web_republisher together
+# this is necessary to make tf2_web_republisher restart when log player exits
+ADD LogPlayback.launch LogPlayback.launch
 
 ADD entrypoint.sh entrypoint.sh
 

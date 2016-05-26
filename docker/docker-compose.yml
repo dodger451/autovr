@@ -3,14 +3,12 @@ services:
   roscore:
     image: autovr
     command: roscore
-    ports:
-      - 11311:11311
     environment:
       - "ROS_HOSTNAME=roscore"
 
   player:
     image: autovr
-    command: rosbag play -q -l --clock /rosbags/2016-05-11-00-00-01.bag
+    command: roslaunch LogPlayback.launch logfile:=/rosbags/2016-05-11-00-00-01.bag
     volumes:
       - ${ROSBAGDIR}:/rosbags
     environment:
@@ -18,6 +16,7 @@ services:
       - "ROS_MASTER_URI=http://roscore:11311"
     depends_on:
       - roscore
+    restart: always
 
   websocket:
     image: autovr
@@ -29,15 +28,5 @@ services:
       - "ROS_MASTER_URI=http://roscore:11311"
     depends_on:
       - roscore
+      - player
     restart: always
-
-  tf2:
-    image: autovr
-    command: rosrun tf2_web_republisher tf2_web_republisher
-    environment:
-      - "ROS_HOSTNAME=tf2"
-      - "ROS_MASTER_URI=http://roscore:11311"
-    depends_on:
-      - roscore
-
-
