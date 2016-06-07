@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 ADD LogPlayback.launch LogPlayback.launch
 
 ADD entrypoint.sh entrypoint.sh
-
-ENTRYPOINT [ "/entrypoint.sh"]
-CMD ["/bin/bash"]
+RUN perl -p -i -e "s/\r//g" entrypoint.sh
+#ENTRYPOINT ["/bin/bash"]
+ ENTRYPOINT [ "/entrypoint.sh"]
+ CMD ["/bin/bash"]
