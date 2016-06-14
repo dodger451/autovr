@@ -1,255 +1,197 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <title>Web VR boilerplate</title>
+  <title>three.js webgl - equirectangular video panorama</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <style>
     body {
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      color: #fff;
+      background-color: #000000;
       margin: 0px;
-      padding: 0;
       overflow: hidden;
+    }
+
+    #info {
+      position: absolute;
+      top: 0px; width: 100%;
+      color: #ffffff;
+      padding: 5px;
+      font-family:Monospace;
+      font-size:13px;
+      font-weight: bold;
+      text-align:center;
+    }
+
+    a {
+      color: #ffffff;
     }
   </style>
 </head>
-
 <body>
 
-</body>
+<div id="container"></div>
 
-<script>
-  /*
-   * Debug parameters.
-   */
-  WebVRConfig = {
-    /**
-     * webvr-polyfill configuration
-     */
-
-    // Forces availability of VR mode.
-    //FORCE_ENABLE_VR: true, // Default: false.
-    // Complementary filter coefficient. 0 for accelerometer, 1 for gyro.
-    //K_FILTER: 0.98, // Default: 0.98.
-    // How far into the future to predict during fast motion.
-    //PREDICTION_TIME_S: 0.040, // Default: 0.040 (in seconds).
-    // Flag to disable touch panner. In case you have your own touch controls
-    //TOUCH_PANNER_DISABLED: true, // Default: false.
-    // Enable yaw panning only, disabling roll and pitch. This can be useful for
-    // panoramas with nothing interesting above or below.
-    //YAW_ONLY: true, // Default: false.
-    // Enable the deprecated version of the API (navigator.getVRDevices).
-    //ENABLE_DEPRECATED_API: true, // Default: false.
-    // Scales the recommended buffer size reported by WebVR, which can improve
-    // performance. Making this very small can lower the effective resolution of
-    // your scene.
-    BUFFER_SCALE: 0.5, // default: 1.0
-    // Allow VRDisplay.submitFrame to change gl bindings, which is more
-    // efficient if the application code will re-bind it's resources on the
-    // next frame anyway.
-    // Dirty bindings include: gl.FRAMEBUFFER_BINDING, gl.CURRENT_PROGRAM,
-    // gl.ARRAY_BUFFER_BINDING, gl.ELEMENT_ARRAY_BUFFER_BINDING,
-    // and gl.TEXTURE_BINDING_2D for texture unit 0
-    // Warning: enabling this might lead to rendering issues.
-    //DIRTY_SUBMIT_FRAME_BINDINGS: true // default: false
-  };
-</script>
-
-<!--
-  A polyfill for Promises. Needed for IE and Edge.
-  -->
-<script src="node_modules/es6-promise/dist/es6-promise.js"></script>
-
-<!--
-  three.js 3d library
-  -->
 <script src="node_modules/three/three.js"></script>
 
-<!--
-  VRControls.js acquires positional information from connected VR devices and applies the transformations to a three.js camera object.
-   -->
-<script src="node_modules/three/examples/js/controls/VRControls.js"></script>
-
-<!--
-  VREffect.js handles stereo camera setup and rendering.
-  -->
-<script src="node_modules/three/examples/js/effects/VREffect.js"></script>
-
-<!--
-  A polyfill for WebVR using the Device{Motion,Orientation}Event API.
-  -->
-<script src="node_modules/webvr-polyfill/build/webvr-polyfill.js"></script>
-
-<!--
-  Helps enter and exit VR mode, provides best practices while in VR.
-  -->
-<script src="build/webvr-manager.js"></script>
-
-
-<!--
-  A polyfill for Promises. Needed for IE and Edge.
-  -->
-<!--<script src="node_modules/es6-promise/dist/es6-promise.js"></script>-->
-
-<!--
-  three.js 3d library
-  -->
-<script src="node_modules/three/three.js"></script>
-
-<!--
-  ros stuff
-  -->
-<script src="build/eventemitter2.min.js"></script>
-<script src="build/roslib.js"></script>
-<!--<script src="node_modules/three/examples/js/GPUParticleSystem.js"></script>-->
-<script src="build/ros3d.js"></script>
-
-<!--
-  VRControls.js acquires positional information from connected VR devices and applies the transformations to a three.js camera object.
-   -->
-<script src="node_modules/three/examples/js/controls/VRControls.js"></script>
-
-<!--
-  VREffect.js handles stereo camera setup and rendering.
-  -->
-<script src="node_modules/three/examples/js/effects/VREffect.js"></script>
-
-<!--
-  A polyfill for WebVR using the Device{Motion,Orientation}Event API.
-  -->
-<script src="node_modules/webvr-polyfill/build/webvr-polyfill.js"></script>
-
-<!--
-  Helps enter and exit VR mode, provides best practices while in VR.
-  -->
-<script src="build/webvr-manager.js"></script>
-
-
-
-
 <script>
-  // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
-  // Only enable it if you actually need to.
-  var renderer = new THREE.WebGLRenderer({antialias: true});
-  renderer.setPixelRatio(window.devicePixelRatio);
 
-  // Append the canvas element created by the renderer to document body element.
-  document.body.appendChild(renderer.domElement);
+  var camera, scene, renderer;
 
-  // Create a three.js scene.
-  var scene = new THREE.Scene();
+  var texture_placeholder,
+          isUserInteracting = false,
+          onMouseDownMouseX = 0, onMouseDownMouseY = 0,
+          lon = 0, onMouseDownLon = 0,
+          lat = 0, onMouseDownLat = 0,
+          phi = 0, theta = 0,
+          distance = 500;
 
-  // Create a three.js camera.
-  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
+  init();
+  animate();
 
-  // Apply VR headset positional data to camera.
-  var controls = new THREE.VRControls(camera);
+  function init() {
 
-  // Apply VR stereo rendering to renderer.
-  var effect = new THREE.VREffect(renderer);
-  effect.setSize(window.innerWidth, window.innerHeight);
+    var container, mesh;
 
-  var loader = new THREE.TextureLoader();
-  loader.load('img/frame0000.jpg', onTextureLoaded);
+    container = document.getElementById( 'container' );
 
-  function onTextureLoaded(texture) {
-//create a sphere — we’ll use the inner surface to project our Mars image on to it
-    var geometry = new THREE.SphereGeometry(50, 200, 200,-Math.PI , Math.PI, Math.PI/4, Math.PI/2);
-    texture.wrapS = THREE.RepeatWrapping;
-//    texture.repeat.x = - 1;
-// create the material, using a texture of mars
-    var material = new THREE.MeshBasicMaterial({map: texture, side: THREE.BackSide});
+    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
+    camera.target = new THREE.Vector3( 0, 0, 0 );
 
-// create the mesh based on geometry and material
-    var mesh = new THREE.Mesh(geometry, material);
-    var skybox = new THREE.Mesh(geometry, material);
-    scene.add(skybox);
+    scene = new THREE.Scene();
 
-// Add a grid.
-    scene.add(new ROS3D.Grid());
+    var geometry = new THREE.SphereBufferGeometry( 500, 60, 40 );
+    geometry.scale( - 1, 1, 1 );
+
+    var video = document.createElement( 'video' );
+        video.width = 640;
+        video.height = 360;
+        video.autoplay = true;
+        video.loop = true;
+        video.crossOrigin = "anonymous";
+
+        video.src = "http://192.168.178.40:8080/stream?topic=/sensors/broadrreachcam_left/image_raw&type=vp8";
+
+    var texture = new THREE.VideoTexture( video );
+    texture.minFilter = THREE.LinearFilter;
+    texture.format = THREE.RGBFormat;
+
+    var material   = new THREE.MeshBasicMaterial( { map : texture } );
+
+    mesh = new THREE.Mesh( geometry, material );
+
+    scene.add( mesh );
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+
+    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+    document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
+    document.addEventListener( 'MozMousePixelScroll', onDocumentMouseWheel, false);
+
+    //
+
+    window.addEventListener( 'resize', onWindowResize, false );
 
   }
 
-  // Add a repeating grid as a skybox.
-  /*
-   var boxWidth = 5;
-   var loader = new THREE.TextureLoader();
-   loader.load('img/R0010001.jpg', onTextureLoaded);
+  function onWindowResize() {
 
-   function onTextureLoaded(texture) {
-   texture.wrapS = THREE.RepeatWrapping;
-   texture.wrapT = THREE.RepeatWrapping;
-   texture.repeat.set(boxWidth, boxWidth);
-
-   var geometry = new THREE.BoxGeometry(boxWidth, boxWidth, boxWidth);
-   var material = new THREE.MeshBasicMaterial({
-   map: texture,
-   color: 0x01BE00,
-   side: THREE.BackSide
-   });
-
-   var skybox = new THREE.Mesh(geometry, material);
-   scene.add(skybox);
-   }
-
-   */
-  // Create a VR manager helper to enter and exit VR mode.
-  var params = {
-    hideButton: false, // Default: false.
-    isUndistorted: false // Default: false.
-  };
-  var manager = new WebVRManager(renderer, effect, params);
-
-  // Create 3D objects.
-  var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-  var material = new THREE.MeshNormalMaterial();
-  var cube = new THREE.Mesh(geometry, material);
-
-  // Position cube mesh
-  cube.position.z = -1;
-
-
-  // Add cube mesh to your three.js scene
-  scene.add(cube);
-
-  // Request animation frame loop function
-  var lastRender = 0;
-  function animate(timestamp) {
-    var delta = Math.min(timestamp - lastRender, 500);
-    lastRender = timestamp;
-
-    // Apply rotation to cube mesh
-    cube.rotation.y += delta * 0.0006;
-
-    // Update VR headset position and apply to camera.
-    controls.update();
-
-    // Render the scene through the manager.
-    manager.render(scene, camera, timestamp);
-
-    requestAnimationFrame(animate);
-  }
-
-  // Kick off animation loop
-  animate(performance ? performance.now() : Date.now());
-
-  function onResize(e) {
-    effect.setSize(window.innerWidth, window.innerHeight);
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
   }
 
-  window.addEventListener('resize', onResize, true);
-  window.addEventListener('vrdisplaypresentchange', onResize, true);
+  function onDocumentMouseDown( event ) {
+
+    event.preventDefault();
+
+    isUserInteracting = true;
+
+    onPointerDownPointerX = event.clientX;
+    onPointerDownPointerY = event.clientY;
+
+    onPointerDownLon = lon;
+    onPointerDownLat = lat;
+
+  }
+
+  function onDocumentMouseMove( event ) {
+
+    if ( isUserInteracting === true ) {
+
+      lon = ( onPointerDownPointerX - event.clientX ) * 0.1 + onPointerDownLon;
+      lat = ( event.clientY - onPointerDownPointerY ) * 0.1 + onPointerDownLat;
+
+    }
+
+  }
+
+  function onDocumentMouseUp( event ) {
+
+    isUserInteracting = false;
+
+  }
+
+  function onDocumentMouseWheel( event ) {
+
+    // WebKit
+
+    if ( event.wheelDeltaY ) {
+
+      distance -= event.wheelDeltaY * 0.05;
+
+      // Opera / Explorer 9
+
+    } else if ( event.wheelDelta ) {
+
+      distance -= event.wheelDelta * 0.05;
+
+      // Firefox
+
+    } else if ( event.detail ) {
+
+      distance += event.detail * 1.0;
+
+    }
+
+  }
+
+  function animate() {
+
+    requestAnimationFrame( animate );
+    update();
+
+  }
+
+  function update() {
+
+    lat = Math.max( - 85, Math.min( 85, lat ) );
+    phi = THREE.Math.degToRad( 90 - lat );
+    theta = THREE.Math.degToRad( lon );
+
+    camera.position.x = distance * Math.sin( phi ) * Math.cos( theta );
+    camera.position.y = distance * Math.cos( phi );
+    camera.position.z = distance * Math.sin( phi ) * Math.sin( theta );
+
+    camera.lookAt( camera.target );
+
+    /*
+     // distortion
+     camera.position.copy( camera.target ).negate();
+     */
+
+    renderer.render( scene, camera );
+
+  }
 
 </script>
 
+<video src="">
+</body>
 </html>
