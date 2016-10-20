@@ -1,0 +1,26 @@
+<launch>
+	<arg name="logfile" />
+	<arg name="rate"     default="1.0"/>
+
+	<param name="use_sim_time" value="true" />
+
+	<node
+		pkg="rosbag"
+		type="play"
+		name="player"
+		required="true"
+		output="screen"
+		args="--clock -q --bags $(arg logfile) -r $(arg rate)"
+	/>
+
+	<node
+		name="tf2_web_republisher"
+		pkg="tf2_web_republisher"
+		type="tf2_web_republisher"
+	
+	<node
+		name="web_video_server"
+		pkg="web_video_server"
+		type="web_video_server"
+	/>
+</launch>
