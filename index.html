@@ -110,35 +110,271 @@
 
 <script>
 
+    var farClip = 35;
     var serverUrl = 'ws://localhost:9090';
     //var serverUrl = 'ws://46.101.220.4:9090';
     //   var serverUrl = 'ws://758f5159.ngrok.io';
-    var cView = 'follow';
-    var farClip = 35;
-    // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
-    // Only enable it if you actually need to.
-    var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
-    window.devicePixelRatio = window.devicePixelRatio || 1;
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setClearColor(0x555555, 1.0);
-    document.body.appendChild(renderer.domElement);
 
-    var scene = new THREE.Scene();
+    /** @var THREE.Scene */
+    window.scene =  null;
+    /** @var THREE.WebGLRenderer */
+    window.renderer =  null;
+    /** @var THREE.PerspectiveCamera */
+    window.camera = null;
+    /** @var THREE.Object3D */
+    window.camBody = null;
+    /** @var string */
+    window.currentView = 'follow';
+    /** @var THREE.VRControls */
+    window.controls = null;
+    /** @var THREE.VREffect */
+    window.effect = null;
+    /** @var THREE.WebVRManager */
+    window.manager = null;
+    /** @var ROSLIB.Ros */
+    window.ros = null;
+    /** @var ROSLIB.TFClient */
+    window.tfClient = null;
+    /** @var ROS3D.PointCloud2 */
+    window.pointCloud = null;
 
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, farClip);
-    var body = new THREE.Object3D();
-    body.add(camera);
-    scene.add(body);
-    setView(cView);
+    window.renderer = createRenderer();
+    document.body.appendChild(window.renderer.domElement);
+    window.scene = new THREE.Scene();
+    window.scene.add(setupCamera(farClip)); // create window.camera and window.camBody
+    window.scene.add(new ROS3D.Grid());
+    window.scene.add(createLight());
+    setupCarMesh(); // creates window.carMesh and adds to scene
 
+    setupVr(); // creates window.controls, window.manager and window.effect
+    setupRos(); // creates window.ros, window.tfClient and window.pointCloud
+    setupGui();
 
-    // Apply VR headset positional data to camera.
-    var controls = new THREE.VRControls(camera);
+    window.addEventListener("keydown", onWindowKeyDown, false);
+    window.addEventListener('resize', onResize, true);
+    window.addEventListener('vrdisplaypresentchange', onResize, true);
 
-    // Apply VR stereo rendering to renderer.
-    var effect = new THREE.VREffect(renderer);
-    effect.setSize(window.innerWidth, window.innerHeight);
+    setView('follow');
+    animate(Date.now());// Kick off animation loop
 
+    /**
+     * Render frame - loop
+     *
+     * @param timestamp
+     */
+    function animate(timestamp) {
+
+        if (null == window.manager.effect) { // not initialized
+            return;
+        }
+        // Update VR headset position and apply to camera.
+        window.controls.update();
+        // Render the scene through the manager.
+        window.manager.render(window.scene, window.camera, timestamp);
+        // recursively render next frame
+        requestAnimationFrame(animate);
+    }
+
+    /**
+     * Loads 'asset_src/passat.js' into window.carMesh and adds it to the scene.
+     */
+    function setupCarMesh () {
+        loader = new THREE.JSONLoader();
+
+        loader.load('asset_src/passat.js', function (geometry, materials) {
+            window.carMesh = new THREE.Mesh(
+                    geometry,
+                    new THREE.MultiMaterial(materials)
+            );
+
+            window.carMesh.receiveShadow = true;
+            window.carMesh.castShadow = true;
+            window.carMesh.rotation.x = Math.PI / 2;
+            window.carMesh.scale.set(1, 1, 1);
+            window.scene.add(window.carMesh);
+        });
+    }
+
+    /**
+     * Create gui - components.
+     */
+    function setupGui() {
+        var gui = new dat.GUI();
+        // Camera Folder
+        var fCamera = gui.addFolder('Camera');
+        fCamera.add(window, 'toggleView');
+        fCamera.add(window, 'currentView').listen();
+        fCamera.open();
+
+        gui.add(window, 'toggleDisplayCarModel');
+
+        // PointCloud Folder
+        var fPointCloud = gui.addFolder('PointCloud');
+        fPointCloud.add(pointCloud.particles, 'max_pts');
+        //gui.add(window, 'toggleDisplayPointCloud');
+    }
+
+    /**
+     * Returns new renderer.
+     *
+     * @return THREE.WebGLRenderer
+     **/
+    function createRenderer() {
+        var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+        window.devicePixelRatio = window.devicePixelRatio || 1;
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setClearColor(0x555555, 1.0);
+        return renderer;
+    }
+
+    /**
+     * Create new camera with parent body.
+     *
+     * Sets window.camera, window.camBody.
+     *
+     * @return THREE.Object3D body
+     */
+    function setupCamera(farClip) {
+        window.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, farClip);
+        window.camBody = new THREE.Object3D();
+        window.camBody.add(window.camera);
+        return window.camBody;
+    }
+
+    /**
+     * Returns new directional light.
+     *
+     * @return THREE.DirectionalLight
+     */
+    function createLight() {
+        var light = new THREE.DirectionalLight(0xffffff);
+        light.castShadow = true;
+        light.shadow.camera.left = -60;
+        light.shadow.camera.top = -60;
+        light.shadow.camera.right = 60;
+        light.shadow.camera.bottom = 60;
+        light.shadow.camera.near = 1;
+        light.shadow.camera.far = 1000;
+        light.shadow.bias = -.0001;
+        light.shadow.mapSize.width = light.shadow.mapSize.height = 1024;
+        light.position.z = 10;
+        return light;
+    }
+
+    /**
+     * Setup ROSLIB.
+     *
+     * Sets window.ros ,window.tfClient and window.pointCloud
+     **/
+    function setupRos () {
+        // start ROS
+        window.ros = new ROSLIB.Ros({
+            url: serverUrl
+        });
+        // Setup a client to listen to TFs.
+        window.tfClient = new ROSLIB.TFClient({
+            ros: window.ros,
+            angularThres: 0.01,
+            transThres: 0.01,
+            rate: 10.0,
+            fixedFrame: '/base_link'
+        });
+
+        // Setup PointCloud2
+        window.pointCloud = new ROS3D.PointCloud2({
+            ros: window.ros,
+//  topic : "/sensors/points_throttle",
+//  topic : "/sensors/voxel_grid/output_throttle",
+//  topic : "/sensors/voxel_grid/output",
+            //topic : "/sensors/velodyne_points",
+            topic: "/sensors/points", // Ibeo Lux
+            tfClient: window.tfClient,
+            max_pts: 100000,
+            size: 0.5,
+            rootObject: window.scene
+//  texture : 'asset_src/pixel-white.png'
+        });
+    }
+
+    /**
+     * Setup VR support.
+     *
+     * Sets window.effect, window.controls and window.manager.
+     **/
+    function setupVr() {
+        // Apply VR stereo rendering to renderer.
+        window.effect = new THREE.VREffect(window.renderer);
+        window.effect.setSize(window.innerWidth, window.innerHeight);
+
+        window.controls = new THREE.VRControls(window.camera);
+        window.manager = new WebVRManager(window.renderer, window.effect, {hideButton: false, isUndistorted: false });
+    }
+
+    function onResize() {
+        window.effect.setSize(window.innerWidth, window.innerHeight);
+        window.camera.aspect = window.innerWidth / window.innerHeight;
+        window.camera.updateProjectionMatrix();
+    }
+
+    /**
+     * Setup Keyboard input
+     */
+    function onWindowKeyDown(event) {
+        // Get the key code of the pressed key
+        var keyCode = event.which;
+        // 'space' - Toggle through the views
+        if (keyCode == 32) {
+            toggleView();
+        }
+    }
+
+    /**
+     * Toggle between birdeye and and follow view.
+     */
+    function toggleView() {
+        setView(window.currentView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
+    }
+
+    /**
+     * Toggle visibility of car model.
+     */
+    function toggleDisplayCarModel() {
+        var newVisible = !window.carMesh.visible;
+        mesh.traverse(function (object) {
+            object.visible = newVisible;
+        })
+    }
+
+    /**
+     * Toogle visibility of pointcloud
+     */
+    function toggleDisplayPointCloud() {
+        // TODO FIX ME
+    }
+
+    /**
+     * @param view string 'birdeye'|'follow'
+     */
+    function setView(view) {
+        switch (view) {
+            case 'birdeye':
+                window.camBody.position.z = 30.0;
+                window.camBody.position.y = 0.0;
+                window.camBody.position.x = -3;
+                window.camBody.rotation.set(-Math.PI * -0.15, 0, 0, 'XYZ');
+                break;
+            case 'follow':
+            default:
+                window.camBody.position.z = 3.0;
+                window.camBody.position.y = 0.0;
+                window.camBody.position.x = -3;
+                window.camBody.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
+                break;
+        }
+        currentView = view;
+    }
+
+    // We may need these snipplets
 
     // Add a repeating grid as a skybox.
     //var boxWidth = 5;
@@ -161,192 +397,22 @@
     //  scene.add(skybox);
     //}
 
+    /*
+    *
+     // Create interactive 3D objects to change position.
+     var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+     var material = new THREE.MeshNormalMaterial();
+     var cube = new THREE.Mesh(geometry, material);
+     cube.position.x = -2.7;//forward
+     cube.position.y = 0.0;//left
+     cube.position.z = 3.5;//up
+     var cubeScale = 0.1;
+     cube.scale.set(cubeScale, cubeScale, cubeScale);
+     scene.add(cube);
 
-    // Create a VR manager helper to enter and exit VR mode.
-    var params = {
-        hideButton: false, // Default: false.
-        isUndistorted: false // Default: false.
-    };
-    var manager = new WebVRManager(renderer, effect, params);
-
-    // Create interactive 3D objects to change position.
-    var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-    var material = new THREE.MeshNormalMaterial();
-    var cube = new THREE.Mesh(geometry, material);
-    cube.position.x = -2.7;//forward
-    cube.position.y = 0.0;//left
-    cube.position.z = 3.5;//up
-    var cubeScale = 0.1;
-    cube.scale.set(cubeScale, cubeScale, cubeScale);
-    scene.add(cube);
-
-
-    // Add a grid.
-    var grid = new ROS3D.Grid();
-    scene.add(grid);
-
-    // start ROS
-    var ros = new ROSLIB.Ros({
-        url: serverUrl
-    });
-    // Setup a client to listen to TFs.
-    var tfClient = new ROSLIB.TFClient({
-        ros: ros,
-        angularThres: 0.01,
-        transThres: 0.01,
-        rate: 10.0,
-        fixedFrame: '/base_link'
-    });
-
-    // Setup PointCloud2
-    pointCloud = new ROS3D.PointCloud2({
-        ros: ros,
-//  topic : "/sensors/points_throttle",
-//  topic : "/sensors/voxel_grid/output_throttle",
-//  topic : "/sensors/voxel_grid/output",
-        //topic : "/sensors/velodyne_points",
-        topic: "/sensors/points", // Ibeo Lux
-        tfClient: tfClient,
-        max_pts: 100000,
-        size: 0.5,
-        rootObject: scene
-//  texture : 'asset_src/pixel-white.png'
-    });
-    light = new THREE.DirectionalLight(0xffffff);
-    light.castShadow = true;
-    light.shadow.camera.left = -60;
-    light.shadow.camera.top = -60;
-    light.shadow.camera.right = 60;
-    light.shadow.camera.bottom = 60;
-    light.shadow.camera.near = 1;
-    light.shadow.camera.far = 1000;
-    light.shadow.bias = -.0001;
-    light.shadow.mapSize.width = light.shadow.mapSize.height = 1024;
-    light.position.z = 10;
-    scene.add(light);
-    loader = new THREE.JSONLoader();
-    var mesh;
-    loader.load('asset_src/passat.js', function (geometry, materials) {
-        mesh = new THREE.Mesh(
-                geometry,
-                new THREE.MultiMaterial(materials)
-        );
-
-        mesh.receiveShadow = true;
-        mesh.castShadow = true;
-        mesh.rotation.x = Math.PI / 2;
-        mesh.scale.set(1, 1, 1);
-        //mesh.position.x = 1;
-//
-        scene.add(mesh);
-        animate();
-    });
-
-    // Request animation frame loop function
-    var lastRender = 0;
-
-    setupGui();
-    // Kick off animation loop
-    animate(Date.now());
-
-    /**
-     * Create gui - components.
      */
-    function setupGui() {
-        var gui = new dat.GUI();
-        var fCamera = gui.addFolder('Camera');
-        fCamera.add(window, 'toggleView');
-        fCamera.add(window, 'cView').listen();
-        fCamera.open();
-
-        gui.add(window, 'toggleDisplayCarModel');
-
-        var fPointCloud = gui.addFolder('PointCloud');
-        fPointCloud.add(pointCloud.particles, 'max_pts');
-        //gui.add(window, 'toggleDisplayPointCloud');
-    }
-
-    /**
-     * Render frame - loop
-     *
-     * @param timestamp
-     */
-    function animate(timestamp) {
-        lastRender = timestamp;
-        // Update VR headset position and apply to camera.
-        controls.update();
-        // Render the scene through the manager.
-        manager.render(scene, camera, timestamp);
-        // recursively render next frame
-        requestAnimationFrame(animate);
-    }
-    /**
-     * Toggle between birdeye and and follow view.
-     */
-    function toggleView() {
-        setView(cView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
-    }
-
-    /**
-     * Toggle visibility of car model.
-     */
-    function toggleDisplayCarModel() {
-        var newVisible = !mesh.visible;
-        mesh.traverse(function (object) {
-            object.visible = newVisible;
-        })
-    }
-
-    /**
-     * Toogle visibility of pointcloud
-     */
-    function toggleDisplayPointCloud() {
-        // TODO FIX ME
-    }
-
-    /**
-     * @param view string 'birdeye'|'follow'
-     */
-    function setView(view) {
-        switch (view) {
-            case 'birdeye':
-                body.position.z = 30.0;
-                body.position.y = 0.0;
-                body.position.x = -3;
-                body.rotation.set(-Math.PI * -0.15, 0, 0, 'XYZ');
-                break;
-            case 'follow':
-            default:
-                body.position.z = 3.0;
-                body.position.y = 0.0;
-                body.position.x = -3;
-                body.rotation.set(0, -Math.PI * 0.5, -Math.PI * 0.5, 'XYZ');
-                break;
-        }
-        cView = view;
-    }
-
-
-    function onResize() {
-        effect.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-    }
-
-    function onWindowKeyDown(event) {
-        // Get the key code of the pressed key
-        var keyCode = event.which;
-        // 'space' - Toggle through the views
-        if (keyCode == 32) {
-            toggleView();
-        }
-    }
-
-    // setup handlers for default events
-    window.addEventListener("keydown", onWindowKeyDown, false);
-    window.addEventListener('resize', onResize, true);
-    window.addEventListener('vrdisplaypresentchange', onResize, true);
-
 </script>
 
 </html>
+
+
