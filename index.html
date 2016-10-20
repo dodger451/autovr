@@ -15,7 +15,7 @@
             height: 100%;
             background-color: #fff;
             color: #fff;
-            margin: 0px;
+            margin: 0;
             padding: 0;
             overflow: hidden;
         }
@@ -118,6 +118,7 @@
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
     // Only enable it if you actually need to.
     var renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+    window.devicePixelRatio = window.devicePixelRatio || 1;
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0x555555, 1.0);
     document.body.appendChild(renderer.domElement);
@@ -178,10 +179,10 @@
     var cubeScale = 0.1;
     cube.scale.set(cubeScale, cubeScale, cubeScale);
     scene.add(cube);
-    //TODO setup toggle view when gazing on the cube
+
 
     // Add a grid.
-    var grid = new ROS3D.Grid(grid);
+    var grid = new ROS3D.Grid();
     scene.add(grid);
 
     // start ROS
@@ -208,7 +209,7 @@
         tfClient: tfClient,
         max_pts: 100000,
         size: 0.5,
-        rootObject: scene,
+        rootObject: scene
 //  texture : 'asset_src/pixel-white.png'
     });
     light = new THREE.DirectionalLight(0xffffff);
@@ -242,11 +243,11 @@
     });
 
     // Request animation frame loop function
-    var lastRender = 0
+    var lastRender = 0;
 
     setupGui();
     // Kick off animation loop
-    animate(performance ? performance.now() : Date.now());
+    animate(Date.now());
 
     /**
      * Create gui - components.
@@ -271,7 +272,6 @@
      * @param timestamp
      */
     function animate(timestamp) {
-        var delta = Math.min(timestamp - lastRender, 500);
         lastRender = timestamp;
         // Update VR headset position and apply to camera.
         controls.update();
@@ -327,7 +327,7 @@
     }
 
 
-    function onResize(e) {
+    function onResize() {
         effect.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
@@ -336,18 +336,16 @@
     function onWindowKeyDown(event) {
         // Get the key code of the pressed key
         var keyCode = event.which;
-
         // 'space' - Toggle through the views
         if (keyCode == 32) {
             toggleView();
         }
     }
 
-
+    // setup handlers for default events
     window.addEventListener("keydown", onWindowKeyDown, false);
     window.addEventListener('resize', onResize, true);
     window.addEventListener('vrdisplaypresentchange', onResize, true);
-
 
 </script>
 
