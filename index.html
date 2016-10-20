@@ -110,9 +110,9 @@
 
 <script>
 
-   var serverUrl = 'ws://localhost:9090';
-   //var serverUrl = 'ws://46.101.220.4:9090';
- //   var serverUrl = 'ws://758f5159.ngrok.io';
+    var serverUrl = 'ws://localhost:9090';
+    //var serverUrl = 'ws://46.101.220.4:9090';
+    //   var serverUrl = 'ws://758f5159.ngrok.io';
     var cView = 'follow';
     var farClip = 35;
     // Setup three.js WebGL renderer. Note: Antialiasing is a big performance hit.
@@ -129,7 +129,6 @@
     body.add(camera);
     scene.add(body);
     setView(cView);
-
 
 
     // Apply VR headset positional data to camera.
@@ -245,33 +244,33 @@
     // Request animation frame loop function
     var lastRender = 0
 
-   setupGui();
-   // Kick off animation loop
-   animate(performance ? performance.now() : Date.now());
+    setupGui();
+    // Kick off animation loop
+    animate(performance ? performance.now() : Date.now());
 
-   /**
-    * Create gui - components.
-    */
-   function setupGui () {
-       var gui = new dat.GUI();
-       var fCamera = gui.addFolder('Camera');
-       fCamera.add(window, 'toggleView');
-       fCamera.add(window, 'cView').listen();
-       fCamera.open();
+    /**
+     * Create gui - components.
+     */
+    function setupGui() {
+        var gui = new dat.GUI();
+        var fCamera = gui.addFolder('Camera');
+        fCamera.add(window, 'toggleView');
+        fCamera.add(window, 'cView').listen();
+        fCamera.open();
 
-       gui.add(window, 'toggleDisplayCarModel');
+        gui.add(window, 'toggleDisplayCarModel');
 
-       var fPointCloud = gui.addFolder('PointCloud');
-       fPointCloud.add(pointCloud.particles, 'max_pts');
-       //gui.add(window, 'toggleDisplayPointCloud');
-   }
+        var fPointCloud = gui.addFolder('PointCloud');
+        fPointCloud.add(pointCloud.particles, 'max_pts');
+        //gui.add(window, 'toggleDisplayPointCloud');
+    }
 
-   /**
-    * Render frame - loop
-    *
-    * @param timestamp
-    */
-   function animate(timestamp) {
+    /**
+     * Render frame - loop
+     *
+     * @param timestamp
+     */
+    function animate(timestamp) {
         var delta = Math.min(timestamp - lastRender, 500);
         lastRender = timestamp;
         // Update VR headset position and apply to camera.
@@ -281,31 +280,33 @@
         // recursively render next frame
         requestAnimationFrame(animate);
     }
-   /**
-    * Toggle between birdeye and and follow view.
-    */
-   function toggleView () {
-       setView(cView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
-   }
+    /**
+     * Toggle between birdeye and and follow view.
+     */
+    function toggleView() {
+        setView(cView == 'birdeye' ? 'follow' : 'birdeye'); // toggle
+    }
 
-   /**
-    * Toggle visibility of car model.
-    */
-   function toggleDisplayCarModel () {
-       var newVisible = !mesh.visible;
-       mesh.traverse( function ( object ) { object.visible = newVisible; } )
-   }
+    /**
+     * Toggle visibility of car model.
+     */
+    function toggleDisplayCarModel() {
+        var newVisible = !mesh.visible;
+        mesh.traverse(function (object) {
+            object.visible = newVisible;
+        })
+    }
 
-   /**
-    * Toogle visibility of pointcloud
-    */
-   function toggleDisplayPointCloud () {
+    /**
+     * Toogle visibility of pointcloud
+     */
+    function toggleDisplayPointCloud() {
         // TODO FIX ME
-   }
+    }
 
-   /**
-    * @param view string 'birdeye'|'follow'
-    */
+    /**
+     * @param view string 'birdeye'|'follow'
+     */
     function setView(view) {
         switch (view) {
             case 'birdeye':
@@ -338,10 +339,9 @@
 
         // 'space' - Toggle through the views
         if (keyCode == 32) {
-            toggleView ();
+            toggleView();
         }
     }
-
 
 
     window.addEventListener("keydown", onWindowKeyDown, false);
