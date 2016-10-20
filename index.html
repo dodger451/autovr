@@ -111,7 +111,7 @@
 <script>
 
     var farClip = 35;
-    var serverUrl = 'ws://localhost:9090';
+    var serverUrl = 'ws://192.168.56.101:9090';
     //var serverUrl = 'ws://46.101.220.4:9090';
     //   var serverUrl = 'ws://758f5159.ngrok.io';
 
@@ -164,9 +164,7 @@
      */
     function animate(timestamp) {
 
-        if (null == window.manager.effect) { // not initialized
-            return;
-        }
+
         // Update VR headset position and apply to camera.
         window.controls.update();
         // Render the scene through the manager.
@@ -211,7 +209,7 @@
         // PointCloud Folder
         var fPointCloud = gui.addFolder('PointCloud');
         fPointCloud.add(pointCloud.particles, 'max_pts');
-        //gui.add(window, 'toggleDisplayPointCloud');
+        gui.add(window, 'toggleDisplayPointCloud');
     }
 
     /**
@@ -261,17 +259,7 @@
         return light;
     }
 
-    /**
-     * Setup ROSLIB.
-     *
-     * Sets window.ros ,window.tfClient and window.pointCloud
-     **/
-    function setupRos () {
-        // start ROS
-        window.ros = new ROSLIB.Ros({
-            url: serverUrl
-        });
-        // Setup a client to listen to TFs.
+    function setupRosTf() {
         window.tfClient = new ROSLIB.TFClient({
             ros: window.ros,
             angularThres: 0.01,
@@ -279,8 +267,8 @@
             rate: 10.0,
             fixedFrame: '/base_link'
         });
-
-        // Setup PointCloud2
+    }
+    function setupRosPointcloud() {
         window.pointCloud = new ROS3D.PointCloud2({
             ros: window.ros,
 //  topic : "/sensors/points_throttle",
@@ -294,6 +282,23 @@
             rootObject: window.scene
 //  texture : 'asset_src/pixel-white.png'
         });
+
+    }
+    /**
+     * Setup ROSLIB.
+     *
+     * Sets window.ros ,window.tfClient and window.pointCloud
+     **/
+    function setupRos () {
+        // start ROS
+        window.ros = new ROSLIB.Ros({
+            url: serverUrl
+        });
+        // Setup a client to listen to TFs.
+        setupRosTf();
+
+        // Setup PointCloud2
+        setupRosPointcloud();
     }
 
     /**
@@ -340,7 +345,7 @@
      */
     function toggleDisplayCarModel() {
         var newVisible = !window.carMesh.visible;
-        mesh.traverse(function (object) {
+        window.carMesh.traverse(function (object) {
             object.visible = newVisible;
         })
     }
@@ -349,7 +354,15 @@
      * Toogle visibility of pointcloud
      */
     function toggleDisplayPointCloud() {
-        // TODO FIX ME
+
+        if (window.pointCloud) {
+
+            window.pointCloud.rosTopic.unsubscribe();
+            finishedUpdate(window.pointCloud.particles, 0);
+            window.pointCloud = null;
+        } else {
+            setupRosPointcloud();
+        }
     }
 
     /**
