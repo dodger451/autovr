@@ -3435,6 +3435,8 @@ function read_point(msg, index, data_view){
           pt[ 'class' ] = data_view.getUint8(si, 1);
         }else if( msg.fields[fi].name === 'layer' ){
           pt[ 'layer' ] = data_view.getUint8(si, 1);
+        }else if( msg.fields[fi].name === 'classification_flags' ){
+          pt[ 'classification_flags' ] = data_view.getUint16(si, 1);
         }else{
             pt[ msg.fields[fi].name ] = data_view.getFloat32(si, 1);
         }
