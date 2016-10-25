@@ -6,7 +6,7 @@ sensor data from a ROS - based autonomous car.
 ## Start
     roscore
     rosbag play 2016-05-11-00-00-01.bag -l
-    roslaunch rosbridge_servver rosbridge_websocket.launch
+    roslaunch rosbridge_server rosbridge_websocket.launch
     rosrun tf2_web_republisher tf2_web_republisher
 
 Then configure (set serverUrl) and open index.html
