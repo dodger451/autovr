@@ -1722,7 +1722,7 @@ ROS3D.Marker = function(options) {
     case ROS3D.MARKER_LINE_STRIP:
       var lineStripGeom = new THREE.Geometry();
       var lineStripMaterial = new THREE.LineBasicMaterial({
-        size : message.scale.x
+        linewidth : message.scale.x
       });
 
       // add the points
@@ -1912,9 +1912,7 @@ ROS3D.Marker = function(options) {
         texture.needsUpdate = true;
 
         var spriteMaterial = new THREE.SpriteMaterial({
-          map: texture,
-          // NOTE: This is needed for THREE.js r61, unused in r70
-          useScreenCoordinates: false });
+          map: texture});
         var sprite = new THREE.Sprite( spriteMaterial );
         var textSize = message.scale.x;
         sprite.scale.set(textWidth / canvas.height * textSize, textSize, 1);
@@ -2186,9 +2184,11 @@ ROS3D.MarkerArrayClient = function(options) {
         console.warn('Received marker message with deprecated action identifier "1"');
       }
       else if(message.action === 2) { // "DELETE"
-        that.markers[message.ns + message.id].unsubscribeTf();
-        that.rootObject.remove(that.markers[message.ns + message.id]);
-        delete that.markers[message.ns + message.id];
+        if (that.markers[message.ns + message.id]) {
+          that.markers[message.ns + message.id].unsubscribeTf();
+          that.rootObject.remove(that.markers[message.ns + message.id]);
+          delete that.markers[message.ns + message.id];
+        }
       }
       else if(message.action === 3) { // "DELETE ALL"
         for (var m in that.markers){
@@ -2306,12 +2306,12 @@ ROS3D.Arrow = function(options) {
 
   var shaftLength = length - headLength;
 
-  // create and merge geometry
-  var geometry = new THREE.CylinderGeometry(shaftDiameter * 0.5, shaftDiameter * 0.5, shaftLength,
+  // create the body
+  var cylinder = new THREE.CylinderGeometry(shaftDiameter * 0.5, shaftDiameter * 0.5, shaftLength,
       12, 1);
   var m = new THREE.Matrix4();
   m.setPosition(new THREE.Vector3(0, shaftLength * 0.5, 0));
-  geometry.applyMatrix(m);
+  cylinder.applyMatrix(m);
 
   // create the head
   var coneGeometry = new THREE.CylinderGeometry(0, headDiameter * 0.5, headLength, 12, 1);
@@ -2319,9 +2319,14 @@ ROS3D.Arrow = function(options) {
   coneGeometry.applyMatrix(m);
 
   // put the arrow together
-  THREE.GeometryUtils.merge(geometry, coneGeometry);
+  var cylinderMesh = new THREE.Mesh(cylinder);
+  var coneMesh = new THREE.Mesh(coneGeometry);
 
-  THREE.Mesh.call(this, geometry, material);
+  var singleGeometry = new THREE.Geometry();
+  singleGeometry.merge(cylinderMesh.geometry, cylinderMesh.matrix);
+  singleGeometry.merge(coneMesh.geometry, coneMesh.matrix);
+
+  THREE.Mesh.call(this, singleGeometry, material);
 
   this.position = origin;
   this.setDirection(direction);

@@ -111,7 +111,8 @@
 <script>
 
     var farClip = 35;
-    var serverUrl = 'ws://192.168.56.101:9090';
+    //var serverUrl = 'ws://192.168.56.101:9090';
+    var serverUrl = 'ws://localhost:9090';
     //var serverUrl = 'ws://46.101.220.4:9090';
     //   var serverUrl = 'ws://758f5159.ngrok.io';
 
@@ -206,10 +207,12 @@
 
         gui.add(window, 'toggleDisplayCarModel');
 
-        // PointCloud Folder
-        var fPointCloud = gui.addFolder('PointCloud');
-        fPointCloud.add(pointCloud.particles, 'max_pts');
-        gui.add(window, 'toggleDisplayPointCloud');
+	if (window.pointCloud) {
+             // PointCloud Folder
+             var fPointCloud = gui.addFolder('PointCloud');
+             fPointCloud.add(pointCloud.particles, 'max_pts');
+             gui.add(window, 'toggleDisplayPointCloud');
+	}
     }
 
     /**
@@ -268,6 +271,7 @@
             fixedFrame: '/base_link'
         });
     }
+
     function setupRosPointcloud() {
         window.pointCloud = new ROS3D.PointCloud2({
             ros: window.ros,
@@ -275,7 +279,8 @@
 //  topic : "/sensors/voxel_grid/output_throttle",
 //  topic : "/sensors/voxel_grid/output",
             //topic : "/sensors/velodyne_points",
-            topic: "/sensors/points", // Ibeo Lux
+//topic: "/sensors/points", // Ibeo Lux
+            topic: "/sensors/ibeo_pointcloud_fused", // Ibeo Lux
             tfClient: window.tfClient,
             max_pts: 100000,
             size: 0.5,
@@ -284,6 +289,17 @@
         });
 
     }
+
+    function setupRosObstacleMarkerArray() {
+        window.objectMarker = new ROS3D.MarkerArrayClient({
+            ros: window.ros,
+            topic: "/sensors/ibeo_objects_marker_array", // Ibeo Lux Objects
+            tfClient: window.tfClient,
+            rootObject: window.scene
+        });
+
+    }
+
     /**
      * Setup ROSLIB.
      *
@@ -299,6 +315,9 @@
 
         // Setup PointCloud2
         setupRosPointcloud();
+	
+	// Setup Object Markers
+	setupRosObstacleMarkerArray()
     }
 
     /**
